@@ -27,6 +27,8 @@ public class Student extends Person{
     private Faculty studentFaculty;
     @OneToOne
     private Department studentDepartment;
+    @OneToOne
+    private Institute institute;
     @JsonIgnore // get edildiğinde değil de çağırıldığında gelir herhalde
     @OneToMany(mappedBy = "student")
     private List<Lesson> studentLessons;

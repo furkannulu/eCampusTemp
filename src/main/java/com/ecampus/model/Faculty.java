@@ -1,9 +1,6 @@
 package com.ecampus.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,4 +17,6 @@ public class Faculty extends Time{
     private Long id;
     private String facultyName;
     private String facultyManagerName;
+    @OneToOne
+    private Student student;
 }
